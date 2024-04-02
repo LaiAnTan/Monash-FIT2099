@@ -1,6 +1,6 @@
 # Monash-FIT2099
 
-Notes for Object-oriented Design and Principles.
+Notes for Object-oriented Design and Principles, as well as Java lang features.
 
 ---
 
@@ -14,6 +14,30 @@ Notes for Object-oriented Design and Principles.
 - Information Hiding
 - Class Diagram
 
+[Week 2](/week02/)
+
+- Association
+- Dependency
+- Multiplicity
+- Inheritance
+- Design Principles
+
+[Week 3](/week03/)
+
+- Static
+- Final
+- Abstract Classes
+
+[Week 4](/week04/)
+
+- Enumeration
+- Interfaces
+
 [Week 5](/week05/)
 
 - SOLID Principles
+
+[Week 6](/week06/)
+
+- Defensive Copying
+- Dependency Injection
