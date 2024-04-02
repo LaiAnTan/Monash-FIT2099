@@ -207,4 +207,4 @@ A basic rule such that if things change at the same time, you should keep them i
 
 ### Avoid excessive use of literals
 
-Do not use too many fixed values in code.
+Avoid using fixed values (magic numbers) in code, as they are an **antipattern**.
