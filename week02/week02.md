@@ -171,30 +171,6 @@ The code also shows the ways to access different attributes involving inheritanc
 
 ![inheritance](/assets/inheritance.png)
 
-### Static
-
-The static keyword states that an attribute or method belongs to the class itself rather than instances of the class.
-
-Consider the code below:
-
-```java
-
-class A {
-    public static int someValue = 5;
-
-    public static int getSomeValue() {
-        return A.someValue;
-    }
-}
-
-// somewhere else...
-
-int a = A.someValue // 5
-int b = A.getSomeValue() // 5
-```
-
-someValue and getSomeValue are static attribute and method respectively, and can be accessed from anywhere using prefix of class name A.
-
 ### Method overriding
 
 Overriding allows a subclass to have a different implementation of a method in the superclass.
@@ -217,41 +193,6 @@ class B extends A {
     }
 }
 
-```
-
-### Final
-
-The final keyword means that the current attribute / method / class, it means that it cannot be overridden in the future, and the current implementation is the final implementation (i.e. constant).
-
-final in Java is similar to const in other languages
-
-Consider the code:
-
-```java
-class A {
-
-    public final int foo = 1;
-
-    A() {
-        this.foo = 2; // error, cannot reasssign final attribute
-    }
-
-    final int getFoo() {
-        return this.foo;
-    }
-
-}
-
-final class B extends A {
-
-    @Override
-    int getFoo() { // error, cannot override final method
-        return 2;
-    }
-
-}
-
-class C extends B {} // error, cannot extend final class
 ```
 
 ## Design Principles

@@ -26,7 +26,8 @@ Notes for Object-oriented Design and Principles, as well as Java lang features.
 
 - Static
 - Final
-- Abstract Classes
+- Encapsulation Boundaries, Packages, Modules
+- Abstract Class
 
 [Week 4](/week04/)
 
