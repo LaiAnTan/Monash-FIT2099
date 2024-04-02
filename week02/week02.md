@@ -128,4 +128,142 @@ In the code, A created B, and owns B. When A dies, i.e. goes out of scope, B die
 
 ## Inheritance
 
+Inheritance is a relationship between two classes where one class acquires the 'properties' of another class.
+
+The superclass (parent class) is the class being inherited from.
+The subclass (child class) is the class that inherits from a superclass.
+
+In UML, Inhertiance is also known as Generalisation, where one class extends another class.
+
+Consider the code below:
+
+```java
+public class A {
+    public final String name = "name";
+    private int number;
+    protected boolean isTrue;
+    
+    // other members...
+}
+
+public class B extends A {
+
+    public String foo;
+
+    public B(String foo) {
+        super(A); // call constructor of superclass
+        this.foo = foo;
+    }
+
+    public void someMethod() {
+
+        String n = super.name; // accessing public attribute of superclass using super keyword
+        boolean y = this.isTrue; // access protected attribute of subclass
+
+        // note: we cannot access private attributes of superclass in subclass
+    }
+}
+```
+
+The Child class extends (inherits) from the Parent class.
+
+The code also shows the ways to access different attributes involving inheritance, and also calls the constructor of the superclass.
+
+![inheritance](/assets/inheritance.png)
+
+### Static
+
+The static keyword states that an attribute or method belongs to the class itself rather than instances of the class.
+
+Consider the code below:
+
+```java
+
+class A {
+    public static int someValue = 5;
+
+    public static int getSomeValue() {
+        return A.someValue;
+    }
+}
+
+// somewhere else...
+
+int a = A.someValue // 5
+int b = A.getSomeValue() // 5
+```
+
+someValue and getSomeValue are static attribute and method respectively, and can be accessed from anywhere using prefix of class name A.
+
+### Method overriding
+
+Overriding allows a subclass to have a different implementation of a method in the superclass.
+
+For example:
+
+```java
+class A {
+
+    protected String method() {
+        return "Foo";
+    }
+}
+
+class B extends A {
+
+    @Override // optional for readability
+    public String method() { // we can change the access modifier from protected to public, but not protected to private
+        return "Bar"; // overriden, different implementation
+    }
+}
+
+```
+
+### Final
+
+The final keyword means that the current attribute / method / class, it means that it cannot be overridden in the future, and the current implementation is the final implementation (i.e. constant).
+
+final in Java is similar to const in other languages
+
+Consider the code:
+
+```java
+class A {
+
+    public final int foo = 1;
+
+    A() {
+        this.foo = 2; // error, cannot reasssign final attribute
+    }
+
+    final int getFoo() {
+        return this.foo;
+    }
+
+}
+
+final class B extends A {
+
+    @Override
+    int getFoo() { // error, cannot override final method
+        return 2;
+    }
+
+}
+
+class C extends B {} // error, cannot extend final class
+```
+
 ## Design Principles
+
+### Don't Repeat Yourself (DRY)
+
+A principle of software development aimed at reducing repetition of software patterns.
+
+### Classes should be responsible for their own properties
+
+A basic rule such that if things change at the same time, you should keep them in the same place.
+
+### Avoid excessive use of literals
+
+Do not use too many fixed values in code.
