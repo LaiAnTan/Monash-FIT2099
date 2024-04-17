@@ -175,6 +175,7 @@ class Car implements InjectEngine {
 }
 ```
 
+d) Method injection: similar to setter injection, but can be used in any method
 
 ### Testing with Dependency Injection
 
