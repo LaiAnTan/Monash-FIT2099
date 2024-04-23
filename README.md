@@ -42,3 +42,13 @@ Notes for Object-oriented Design and Principles, as well as Java lang features.
 
 - Defensive Copying
 - Dependency Injection
+
+[Week 7]
+
+- Dynamic Modelling
+
+[Week 8](/week08/)
+
+- Design by Contract
+- Fail Fast Principle
+- Command-Query-Seperation Principle
