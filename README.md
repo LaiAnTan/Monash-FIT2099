@@ -43,7 +43,7 @@ Notes for Object-oriented Design and Principles, as well as Java lang features.
 - Defensive Copying
 - Dependency Injection
 
-[Week 7]
+[Week 7](/week07/)
 
 - Dynamic Modelling
 
@@ -52,3 +52,22 @@ Notes for Object-oriented Design and Principles, as well as Java lang features.
 - Design by Contract
 - Fail Fast Principle
 - Command-Query-Seperation Principle
+
+[Week 9](/week09/)
+
+- Design
+- Dependency Control
+- Connascence
+
+[Week 10](/week10/)
+
+- Design Smells
+
+[Week 11](/week11/)
+
+- Refactoring
+- Factory Pattern
+
+[Week 12](/week12/)
+
+- Technical Debt
