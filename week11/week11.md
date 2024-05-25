@@ -28,3 +28,60 @@ Possible situations to refactor:
 1. make small change that eliminates / reduces code smell
 2. test
 3. repeat until code smell not evident
+
+## Factory Pattern
+
+A factory pattern is a design pattern that provides an interface for creating objects but allows subclasses to decide which class to instantiate, without specifying their concrete classes.
+
+Suppose we have different shapes, as structured below:
+
+```java
+
+public interface Shape {
+    void whatAmI();
+}
+
+public class Rectangle implements Shape {
+
+   @Override
+   public void whatAmI() {
+      System.out.println("Rectangle");
+   }
+}
+
+public class Square implements Shape {
+
+   @Override
+   public void draw() {
+      System.out.println("Square");
+   }
+}
+
+public class Circle implements Shape {
+
+   @Override
+   public void whatAmI() {
+      System.out.println("Circle");
+   }
+}
+
+```
+
+If we wanted to instantiate different shapes without calling their constructors, we would use a factory pattern as such:
+
+```java
+public class ShapeFactory {
+
+    public Shape getShape(String shapeType) {
+
+        if (shapeType.equalsIgnoreCase("CIRCLE")) {
+            return new Circle();
+        } else if (shapeType.equalsIgnoreCase("RECTANGLE")) {
+            return new Rectangle();
+        } else if (shapeType.equalsIgnoreCase("SQUARE")) {
+            return new Square();
+        }
+        return null;
+    }
+}
+```
