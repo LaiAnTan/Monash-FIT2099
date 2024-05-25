@@ -61,7 +61,7 @@ Notes for Object-oriented Design and Principles, as well as Java lang features.
 
 [Week 10](/week10/)
 
-- Design Smells
+- Code / Design Smells
 
 [Week 11](/week11/)
 
