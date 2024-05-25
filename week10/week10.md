@@ -133,30 +133,3 @@ When a bunch of functionality is added to make a class extensible for every spec
 #### Lazy Class
 
 A class that does not play a significant role in the system any more, after refactorings have been done.
-
-### Refactoring
-
-> Refactoring is a disciplined technique for restructuring an existing body of code, altering its internal structure without changing its external behavior.
-> -Martin Fowler
-
-#### Benefits of refactoring
-
-- improves design of the system (more extensible)
-- improves understandability of code
-- easier debugging
-
-### When to refactor
-
-![when_to_refactor](/assets/when_to_refactor.png)
-
-Possible situations to refactor:
-
-- adding new features
-- fixing a bug
-- code review
-
-### Metatechnique for Refactoring
-
-1. make small change that eliminates / reduces code smell
-2. test
-3. repeat until code smell not evident
