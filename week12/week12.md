@@ -84,3 +84,13 @@ Uses **Class-Responsibility-Collaboration** cards to specify what a class does a
 Start with one or two obvious cards, and then work out the following classes / responsibilities from there onward based on made up scenarios.
 
 ![crc](/assets/crc.png)
+
+Pros:
+
+- help with encapsulation
+- encourages small objects with clear responsibilities
+
+Cons:
+
+- Does not gurantee good design
+- Not a good way to communicate design to outsiders (e.g. clients)
